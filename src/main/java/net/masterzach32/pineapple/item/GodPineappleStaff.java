@@ -13,6 +13,7 @@ import net.masterzach32.pineapple.Pineapple;
 import net.masterzach32.pineapple.core.helper.LogHelper;
 import net.masterzach32.pineapple.core.util.GameMethods;
 import net.masterzach32.pineapple.entity.EntityPineapple;
+import net.minecraft.nbt.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
@@ -35,16 +36,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SuppressWarnings({"rawtypes", "unchecked"})
 public class GodPineappleStaff extends PineappleStaff {
 	
-	private double[] energy = new double[256];
-	private int[] cooldown = new int[256];
-	private int timer = 1;
-	private double[] attack_damage = new double[256];
-	private double max_energy = 200;
-	private static int swingTick;
-	
-	private double[] crit_chance = new double[256];
-	
-	private ArrayList<ItemStack> staffs = new ArrayList<ItemStack>();
+	public static final int MAX_ENERGY = 200;
 
 	public GodPineappleStaff(int dmg) {
         super(dmg);
@@ -52,24 +44,33 @@ public class GodPineappleStaff extends PineappleStaff {
         setMaxDamage(dmg);
     } 
 	
+	public void onCreated(ItemStack stack, World world, EntityPlayer player) {
+	    if(stack.stackTagCompound == null) stack.setTagCompound(new NBTTagCompound());
+	    stack.stackTagCompound.setDouble("energy", 0.0);
+	    stack.stackTagCompound.setDouble("damage", 0.0);
+	    stack.stackTagCompound.setDouble("critChance", 0.0);
+	    stack.stackTagCompound.setInteger("cooldown", 0);
+	}
+	
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack stack, EntityPlayer player, List dataList, boolean boal) {
-		int i = updateStats(stack);
+	public void addInformation(ItemStack stack, EntityPlayer player, List dataList, boolean b) {
+		if(stack.stackTagCompound == null) stack.setTagCompound(new NBTTagCompound());
+		updateStats(stack);
 		if(true) {
-			dataList.add("§e+§c" + (int) attack_damage[i]+ " §e(1 + 10% Energy) Attack Damage");
-			dataList.add("§e+§c" + (int) crit_chance[i] + "% §e(40% Energy) Crit Chance");
+			dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("damage") + " §e(1 + 15% Energy) Attack Damage");
+			dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("critChance") + "% §e(30% Energy) Crit Chance");
 			dataList.add("");
 			dataList.add("§9Passive: §3Deal 10% of the targets missing health");
 			dataList.add("§3as bonus damage on hit.");
 			dataList.add("");
-			dataList.add("§9Passive: §320% of damage delt is absorbed as energy.");
+			dataList.add("§9Passive: §3Gain 5 energy on hit.");
 			dataList.add("");
-			dataList.add("§9Active: §3Heal a maximum of §c" + (int) energy[i] / 5 / 2 + "§3 (20% Energy) Heart(s).");
+			dataList.add("§9Active: §3Heal a maximum of §c" + (int) stack.stackTagCompound.getDouble("energy") / 5 / 2 + "§3 (20% Energy) Heart(s).");
 			dataList.add("§3The amount of energy consumed to heal cannot");
 			dataList.add("§3excede your missing health.");
-			dataList.add("§b" + cooldown[i] + "§3 seconds before next cast.");
+			dataList.add("§b" + stack.stackTagCompound.getInteger("cooldown") + "§3 seconds before next cast.");
 			dataList.add("");
-			dataList.add("Stored Energy: §c" + (int) energy[i] + " / " + (int) max_energy);
+			dataList.add("Stored Energy: §c" + (int) stack.stackTagCompound.getDouble("energy") + " / " + (int) MAX_ENERGY);
 		} /*else {
 			dataList.add("Right Click to heal §c" + (int) energy / 5 + "§7 health.");
 			//dataList.add("§b" + cooldown + "§7 seconds before next cast.");
@@ -93,30 +94,31 @@ public class GodPineappleStaff extends PineappleStaff {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
-		if(player.shouldHeal()) {
-			int i = updateStats(stack);
-			float missingHealth = GameMethods.getMissingHealth((EntityLivingBase) player);
-			float current_health = ((EntityLivingBase) player).getHealth();
-			if(energy[i] < 0.2D) {
-				player.addChatMessage(new ChatComponentText("§4Your staff has run out of energy!"));
+		if(!world.isRemote) {
+			if(player.shouldHeal()) {
 				updateStats(stack);
-			} else if(missingHealth > energy[i] / 5) {
-				player.heal((float) (energy[i] / 2));
-				energy[i] = energy[i] / 2;
-				GameMethods.spawnParticles("heal", stack, world, player);
-				updateStats(stack);
-			} else if(missingHealth < energy[i] / 5) {
-				float f = missingHealth;
-				player.heal(missingHealth);
-				energy[i] = energy[i] - f;
-				GameMethods.spawnParticles("heal", stack, world, player);
-				updateStats(stack);
-			} else {
-				updateStats(stack);
+				float missingHealth = GameMethods.getMissingHealth((EntityLivingBase) player);
+				float current_health = ((EntityLivingBase) player).getHealth();
+				if(stack.stackTagCompound.getDouble("energy") < 0.0D) {
+					player.addChatMessage(new ChatComponentText("§4Your staff has run out of energy!"));
+					updateStats(stack);
+				} else if(missingHealth > stack.stackTagCompound.getDouble("energy") / 5) {
+					player.heal((float) (stack.stackTagCompound.getDouble("energy") / 5));
+					stack.stackTagCompound.setDouble("energy", stack.stackTagCompound.getDouble("energy") / 5);
+					GameMethods.spawnParticles("heal", stack, world, player);
+					updateStats(stack);
+				} else if(missingHealth < stack.stackTagCompound.getDouble("energy") / 5) {
+					float f = missingHealth;
+					player.heal(missingHealth);
+					stack.stackTagCompound.setDouble("energy", stack.stackTagCompound.getDouble("energy") - f);
+					GameMethods.spawnParticles("heal", stack, world, player);
+					updateStats(stack);
+				} else {
+					updateStats(stack);
+				}
 			}
+			updateStats(stack);
 		}
-		updateStats(stack);
-		timer = 0;
 		return stack;
     }
 	
@@ -125,15 +127,14 @@ public class GodPineappleStaff extends PineappleStaff {
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
 		float missing_health = GameMethods.getMissingHealth((EntityLivingBase) entity);
 		float current_health = ((EntityLivingBase) entity).getHealth();
-		int i = updateStats(stack);
-		if (GameMethods.isCritAttack(crit_chance[i])) {
-			entity.attackEntityFrom(Pineapple.pineapple, (float) (2*((attack_damage[i] + (missing_health * 0.20)))));
+		updateStats(stack);
+		if (GameMethods.isCritAttack(stack.stackTagCompound.getDouble("critChance"))) {
+			entity.attackEntityFrom(Pineapple.pineapple, (float) (2*((stack.stackTagCompound.getDouble("energy") + (missing_health * 0.20)))));
 			GameMethods.spawnParticles("crit", stack, entity.worldObj, (EntityLivingBase) entity);
-			energy[i] = (double) (energy[i] + (2 * (attack_damage[i] * 0.10) + (missing_health * 0.04)));
 		} else {
-			entity.attackEntityFrom(Pineapple.pineapple, (float) (attack_damage[i] + (missing_health * 0.10)));
-			energy[i] = (double) (energy[i] + (attack_damage[i] * 0.10) + (missing_health * 0.02));
+			entity.attackEntityFrom(Pineapple.pineapple, (float) (stack.stackTagCompound.getDouble("damage") + (missing_health * 0.10)));
 		}
+		stack.stackTagCompound.setDouble("energy", stack.stackTagCompound.getDouble("energy") + 5);
 		updateStats(stack);
 		return false;
 	}
@@ -162,28 +163,17 @@ public class GodPineappleStaff extends PineappleStaff {
 	}
 	*/
 	
-	private int updateStats(ItemStack stack) {
-		boolean b = false;
-		int i;
-		for(i = 0; i < staffs.size(); i++) {
-			ItemStack staff = staffs.get(i);
-			if(staff.equals(stack)) {
-				b = true;
-				break;
-			} else {
-				b = false;
-			}
-		}
-		if(!b) {
-			staffs.add(stack);
-			i++;
-			energy[i] = 0;
-		}
-		attack_damage[i] = (float) (1 + (energy[i] * .15));
-		crit_chance[i] = (float) (energy[i] * .40);
-		if (energy[i] > max_energy) {
-			energy[i] = max_energy;
-		}
-		return i;
+	private void updateStats(ItemStack stack) {
+		double energy = stack.stackTagCompound.getDouble("energy");
+		double damage = stack.stackTagCompound.getDouble("damage");
+		double critChance = stack.stackTagCompound.getDouble("critChance");
+		
+		damage = (1 + (energy * .15));
+		critChance = energy * .3;
+		if(energy > MAX_ENERGY) energy = MAX_ENERGY;
+		
+		stack.stackTagCompound.setDouble("energy", energy);
+		stack.stackTagCompound.setDouble("damage", damage);
+		stack.stackTagCompound.setDouble("critChance", critChance);
 	}
 }
