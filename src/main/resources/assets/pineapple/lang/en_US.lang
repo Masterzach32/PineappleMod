@@ -5,8 +5,8 @@ language.code=en_US
 
 item.pineapple.name=Pineapple
 item.pineapple_golden.name=§6Golden Pineapple
-item.pineapple_grilled.name=Grilled Pineapple
 item.godly_pineapple.name=§bGodly Pineapple
+item.pineapple_grilled.name=Grilled Pineapple
 item.pineapple_pie_uncooked.name=Uncooked Pineapple Pie 
 item.pineapple_pie_cooked.name=Pineapple Pie 
 item.pineapple_block.name=Pineapple Block
@@ -14,7 +14,7 @@ item.pineapple_block.name=Pineapple Block
 item.pineapple_rod.name=Pineapple Rod
 item.pineapple_pie_dough.name=Pie Dough
 
-item.pineapple_staff.name=§bPineapple Staff
+item.pineapple_staff.name=§6Pineapple Staff
 item.pineapple_sword.name=Pineapple Sword
 item.pineapple_pickaxe.name=Pineapple Pickaxe
 item.pineapple_axe.name=Pineapple Axe

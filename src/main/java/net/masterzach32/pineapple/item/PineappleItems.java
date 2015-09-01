@@ -51,7 +51,7 @@ public class PineappleItems extends Item {
 	public static final Item pineapple = new ItemFood(4, 1.0F, false){
 		@SideOnly(Side.CLIENT)
 		public void addInformation(ItemStack stack , EntityPlayer player, List dataList, boolean boal) {
-			dataList.add("§9+1 Health Regen per 5 seconds");
+			dataList.add("§e+1 Health Regen per 5 seconds");
 			dataList.add("");
 			dataList.add("§3§o\"Most people dont find these, but");
 			dataList.add("§3§othey seem to have strange healng powers.\"");
@@ -60,7 +60,7 @@ public class PineappleItems extends Item {
 	public static final Item pineapple_golden = new ItemFood(6, 1.5F, false){
 		@SideOnly(Side.CLIENT)
 		public void addInformation(ItemStack stack, EntityPlayer player, List dataList, boolean boal) {
-			dataList.add("§9+5 Health Regen per 5 seconds");
+			dataList.add("§e+5 Health Regen per 5 seconds");
 			dataList.add("");
 			dataList.add("§3§o\"Steve was lucky to make one of these.");
 			dataList.add("§3§oOnly the gods have been known to have");
@@ -70,7 +70,7 @@ public class PineappleItems extends Item {
 	public static final Item godly_pineapple = new ItemFood(10, 2.0F, false){
 		@SideOnly(Side.CLIENT)
 		public void addInformation(ItemStack stack, EntityPlayer player, List dataList, boolean boal) {
-			dataList.add("§9+50 Health Regen per 5 seconds");
+			dataList.add("§e+50 Health Regen per 5 seconds");
 			dataList.add("");
 			dataList.add("§3§o\"These pineapples are gifts from the gods.");
 			dataList.add("§3§oOnly after deep meditation was Steve");
@@ -85,7 +85,7 @@ public class PineappleItems extends Item {
 	public static final Item pineapple_rod = new Item().setFull3D().setUnlocalizedName("pineapple_rod").setCreativeTab(PineappleTab.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_rod");
 	public static final Item pineapple_pie_dough = new Item().setUnlocalizedName("pineapple_pie_dough").setCreativeTab(PineappleTab.pineapple_tab).setTextureName(Pineapple.MODID + ":pie_dough");
 	// Tools.
-	public static final Item pineapple_staff = new PineappleStaff(200).setFull3D().setUnlocalizedName("pineapple_staff").setCreativeTab(PineappleTab.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_staff");
+	public static final Item pineapple_staff = new PineappleStaff(100).setFull3D().setUnlocalizedName("pineapple_staff").setCreativeTab(PineappleTab.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_staff");
 	public static final Item pineapple_sword = new ItemSword(PINEAPPLET).setUnlocalizedName("pineapple_sword").setCreativeTab(PineappleTab.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_sword");
 	public static final Item pineapple_pickaxe = new PineapplePickaxe(PINEAPPLET).setUnlocalizedName("pineapple_pickaxe").setCreativeTab(PineappleTab.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_pickaxe");
 	public static final Item pineapple_axe = new PineappleAxe(PINEAPPLET).setUnlocalizedName("pineapple_axe").setCreativeTab(PineappleTab.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_axe");

@@ -31,12 +31,12 @@ public class GameMethods {
 	/**
 	 * Calculates if the attack is a crit or not, using a chance between 0 and 100.
 	 * 
-	 * @param crit_chance2
+	 * @param crit_chance
 	 * @return true if crit, false if not.
 	 */
-	public static boolean isCritAttack(float crit_chance2) {
+	public static boolean isCritAttack(double crit_chance) {
 		int crit = (int) (Math.random() * 100);
-		if (crit <= crit_chance2 - 1) {
+		if (crit <= crit_chance - 1) {
 			return true;
 		} else {
 			return false;
