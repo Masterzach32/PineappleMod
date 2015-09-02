@@ -1,32 +1,26 @@
-[16:53:49] [main/INFO]: Setting user: Player706
-[16:53:50] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:53:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
-[16:53:56] [Sound Library Loader/INFO]: Sound engine started
-[16:53:56] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[16:53:56] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[16:53:56] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
-[16:53:57] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:53:57] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[16:53:57] [Sound Library Loader/INFO]: Sound engine started
-[16:54:01] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[16:54:01] [Server thread/INFO]: Generating keypair
-[16:54:01] [Server thread/INFO]: Preparing start region for level 0
-[16:54:02] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:54:02] [Server thread/INFO]: Player706[local:E:21dc0b21] logged in with entity id 266 at (-190.9437730817157, 83.0, -132.59058376969696)
-[16:54:02] [Server thread/INFO]: Player706 joined the game
-[16:54:02] [Client thread/INFO]: [CHAT] [Pineapple Mod] An update is available for this mod
-[16:54:03] [Server thread/INFO]: Player706 has just earned the achievement [Taking Inventory]
-[16:54:03] [Client thread/INFO]: [CHAT] Player706 has just earned the achievement [Taking Inventory]
-[16:55:27] [Server thread/INFO]: Saving and pausing game...
-[16:55:27] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:55:27] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:55:27] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:55:29] [Client thread/INFO]: Stopping!
-[16:55:29] [Server thread/INFO]: Stopping server
-[16:55:29] [Server thread/INFO]: Saving players
-[16:55:29] [Server thread/INFO]: Saving worlds
-[16:55:29] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:55:29] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:55:29] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:55:29] [Client Shutdown Thread/INFO]: Stopping server
-[16:55:29] [Client Shutdown Thread/INFO]: Saving players
+[22:09:47] [main/INFO]: Setting user: Player76
+[22:09:48] [Client thread/INFO]: LWJGL Version: 2.9.1
+[22:09:53] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
+[22:09:54] [Sound Library Loader/INFO]: Sound engine started
+[22:09:54] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[22:09:54] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[22:09:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
+[22:09:55] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[22:09:55] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[22:09:56] [Sound Library Loader/INFO]: Sound engine started
+[22:09:58] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[22:09:58] [Server thread/INFO]: Generating keypair
+[22:09:58] [Server thread/INFO]: Preparing start region for level 0
+[22:09:59] [Server thread/INFO]: Changing view distance to 12, from 10
+[22:09:59] [Server thread/INFO]: Player76[local:E:c4da412e] logged in with entity id 375 at (133.0534932053751, 65.0, 223.4023082080882)
+[22:09:59] [Server thread/INFO]: Player76 joined the game
+[22:10:00] [Client thread/INFO]: [CHAT] [Pineapple Mod] An update is available for this mod
+[22:13:21] [Client thread/INFO]: Stopping!
+[22:13:21] [Server thread/INFO]: Stopping server
+[22:13:21] [Server thread/INFO]: Saving players
+[22:13:21] [Server thread/INFO]: Saving worlds
+[22:13:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[22:13:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[22:13:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[22:13:21] [Client Shutdown Thread/INFO]: Stopping server
+[22:13:21] [Client Shutdown Thread/INFO]: Saving players

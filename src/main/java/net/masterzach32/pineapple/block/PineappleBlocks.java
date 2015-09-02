@@ -21,8 +21,8 @@ import net.minecraft.world.World;
 public class PineappleBlocks extends Block {
 
 	public static final Block pineapple_pie = new PineapplePie().setHardness(0.5F).setStepSound(soundTypeCloth).setBlockName("pineapple_pie").setBlockTextureName(Pineapple.MODID + ":pineapple_pie");
-	public static final Block pineapple_block = new PineappleBlocks().setHardness(0.5F).setStepSound(soundTypeCloth).setBlockName("pineapple_block").setBlockTextureName(Pineapple.MODID + "pineapple_block").setCreativeTab(PineappleTab.pineapple_tab);
-	public static final Block godly_pineapple_block = new GodlyPineappleBlock().setHardness(0.5F).setStepSound(soundTypeCloth).setBlockName("godly_pineapple_block").setBlockTextureName(Pineapple.MODID + "godly_pineapple_block").setCreativeTab(PineappleTab.pineapple_tab);
+	public static final Block pineapple_block = new PineappleBlocks().setHardness(0.5F).setStepSound(soundTypeCloth).setBlockName("pineapple_block").setBlockTextureName(Pineapple.MODID + "pineapple_block").setCreativeTab(Pineapple.pineapple_tab);
+	public static final Block godly_pineapple_block = new GodlyPineappleBlock().setHardness(0.5F).setStepSound(soundTypeCloth).setBlockName("godly_pineapple_block").setBlockTextureName(Pineapple.MODID + "godly_pineapple_block").setCreativeTab(Pineapple.pineapple_tab);
 	public static final Block pineapple_stem = new PineappleStem(pineapple_block).setBlockName("pineapple_stem");
 	
 	@SideOnly(Side.CLIENT)

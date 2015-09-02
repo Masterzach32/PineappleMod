@@ -51,7 +51,11 @@ public class PineappleStaff extends Item {
 		damage = stack.getMaxDamage() - stack.getItemDamage();
 		dataList.add("§e+3 Attack Damage");
 		dataList.add("");
-		dataList.add("§9Active: §3Right Click to heal");
-		dataList.add("§31 Heart. §b" + damage + " §3Uses left.");
+		dataList.add("§9Active: §3Right Click to heal 1 Heart. ");
+		dataList.add("§b" + damage + " §3Uses left.");
+		dataList.add("");
+		dataList.add("§3§o\"Steve found this staff in the ancient");
+		dataList.add("§3§oshrine, wondering what great powers");
+		dataList.add("§3§ocould be trapped inside of it.\"");
 	}
 }

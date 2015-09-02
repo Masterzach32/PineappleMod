@@ -1,5 +1,6 @@
 package net.masterzach32.pineapple.item;
 
+import net.masterzach32.pineapple.Pineapple;
 import net.masterzach32.pineapple.PineappleTab;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,7 +24,7 @@ public class PineappleSeed extends Item implements IPlantable
     {
         this.block = block;
         this.soilBlockID = blockID;
-        this.setCreativeTab(PineappleTab.pineapple_tab);
+        this.setCreativeTab(Pineapple.pineapple_tab);
     }
 
     /**
