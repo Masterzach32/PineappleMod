@@ -8,11 +8,8 @@ public class ConfigHandler {
 	public static void createConfig(FMLPreInitializationEvent event){
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
-
 		
 
 		config.save();
 	}
-	
-	
 }

@@ -7,6 +7,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.masterzach32.pineapple.Pineapple;
 import net.masterzach32.pineapple.PineappleTab;
 import net.masterzach32.pineapple.block.PineappleBlocks;
+import net.masterzach32.pineapple.item.magic.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -37,6 +38,7 @@ public class PineappleItems extends Item {
 			super(material);
 		}
 	}
+	
 	static class PineappleAxe extends ItemAxe {
 		protected PineappleAxe(ToolMaterial material) {
 			super(material);
@@ -73,8 +75,8 @@ public class PineappleItems extends Item {
 			dataList.add("§e+50 Health Regen per 5 seconds");
 			dataList.add("");
 			dataList.add("§3§o\"These pineapples are gifts from the gods.");
-			dataList.add("§3§oOnly after deep meditation was Steve");
-			dataList.add("§3§oable to get one from the mighty pineapple gods.\"");
+			dataList.add("§3§oOnly after deep meditation was Steve able");
+			dataList.add("§3§oto get one from the mighty pineapple gods.\"");
 		}
 	}.setAlwaysEdible().setPotionEffect(Potion.regeneration.getId(), 15, 10, 2.0F).setUnlocalizedName("godly_pineapple").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple");
 	public static final Item pineapple_grilled = new ItemFood(7, 1.0F, false).setUnlocalizedName("pineapple_grilled").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_grilled");
@@ -82,17 +84,14 @@ public class PineappleItems extends Item {
 	public static final Item pineapple_pie_uncooked = new Item().setMaxStackSize(1).setUnlocalizedName("pineapple_pie_uncooked").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_pie_uncooked");
 	public static final Item pineapple_pie_cooked = new ItemReed(PineappleBlocks.pineapple_pie).setMaxStackSize(1).setUnlocalizedName("pineapple_pie_cooked").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_pie_cooked");
 	// Materials.
-	public static final Item pineapple_rod = new Item().setFull3D().setUnlocalizedName("pineapple_rod").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_rod");
 	public static final Item pineapple_pie_dough = new Item().setUnlocalizedName("pineapple_pie_dough").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pie_dough");
 	// Tools.
-	public static final Item pineapple_staff = new PineappleStaff(100).setFull3D().setUnlocalizedName("pineapple_staff").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_staff");
 	public static final Item pineapple_sword = new ItemSword(PINEAPPLET).setUnlocalizedName("pineapple_sword").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_sword");
 	public static final Item pineapple_pickaxe = new PineapplePickaxe(PINEAPPLET).setUnlocalizedName("pineapple_pickaxe").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_pickaxe");
 	public static final Item pineapple_axe = new PineappleAxe(PINEAPPLET).setUnlocalizedName("pineapple_axe").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_axe");
 	public static final Item pineapple_shovel = new ItemSpade(PINEAPPLET).setUnlocalizedName("pineapple_shovel").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_shovel");
 	public static final Item pineapple_hoe = new ItemHoe(PINEAPPLET).setUnlocalizedName("pineapple_hoe").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":pineapple_hoe");
 	// God Pineapple Tools.
-	public static final Item godly_pineapple_staff = new GodPineappleStaff(10).setFull3D().setUnlocalizedName("godly_pineapple_staff").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_staff");
 	public static final Item godly_pineapple_sword = new ItemSword(PINEAPPLETG).setUnlocalizedName("godly_pineapple_sword").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_sword");
 	public static final Item godly_pineapple_pickaxe = new PineapplePickaxe(PINEAPPLETG).setUnlocalizedName("godly_pineapple_pickaxe").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_pickaxe");
 	public static final Item godly_pineapple_axe = new PineappleAxe(PINEAPPLETG).setUnlocalizedName("godly_pineapple_axe").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_axe");
@@ -108,28 +107,18 @@ public class PineappleItems extends Item {
 	public static final Item godly_pineapple_chestplate = new PineappleArmor(PINEAPPLEAG, 0, 1).setUnlocalizedName("godly_pineapple_chestplate").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_chestplate");
 	public static final Item godly_pineapple_leggings = new PineappleArmor(PINEAPPLEAG, 0, 2).setUnlocalizedName("godly_pineapple_leggings").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_leggings");
 	public static final Item godly_pineapple_boots = new PineappleArmor(PINEAPPLEAG, 0, 3).setUnlocalizedName("godly_pineapple_boots").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_boots");
+	// Staffs
+	public static final Item pineapple_rod = new Item().setFull3D().setUnlocalizedName("pineapple_rod").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_rod");
+	public static final Item pineapple_essence = new Item().setFull3D().setUnlocalizedName("pineapple_essence").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_essence");
+	public static final Item pineapple_arc = new Item().setUnlocalizedName("pineapple_arc").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_arc");
+	public static final Item pineapple_crystal_empty = new Item().setUnlocalizedName("pineapple_crystal_empty").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_crystal_empty");
+	public static final Item pineapple_crystal_full = new Item().setFull3D().setUnlocalizedName("pineapple_crystal_full").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_crystal_full");
+	public static final Item basic_staff = new BasicStaff(100, 0).setFull3D().setUnlocalizedName("basic_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":basic_staff");
+	public static final Item damage_staff = new DamageStaff(100, 0).setFull3D().setUnlocalizedName("damage_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":damage_staff");
+	public static final Item golden_damage_staff = new GoldDamageStaff(75, 100).setFull3D().setUnlocalizedName("golden_damage_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":golden_healing_staff");
+	public static final Item godly_damage_staff = new GodDamageStaff(50, 200).setFull3D().setUnlocalizedName("godly_damage_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":godly_damage_staff");
+	public static final Item healing_staff = new HealingStaff(100, 0).setFull3D().setUnlocalizedName("healing_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":healing_staff");
+	public static final Item golden_healing_staff = new GoldHealingStaff(75, 100).setFull3D().setUnlocalizedName("golden_healing_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":golden_damage_staff");
+	public static final Item godly_healing_staff = new GodHealingStaff(50, 200).setFull3D().setUnlocalizedName("godly_healing_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":godly_healing_staff");
 	
-	/**
-	 * Registers the armor textures that the player sees in game.
-	 * @param stack
-	 * @param entity
-	 * @param slot
-	 * @param type
-	 */
-    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {  	
-    	if(stack.getItem() == PineappleItems.pineapple_helmet || stack.getItem() == PineappleItems.pineapple_chestplate || stack.getItem() == PineappleItems.pineapple_boots) {
-    		return Pineapple.MODID + ":textures/models/armor/pineapple_layer_1.png";   		
-    	}   	
-    	if(stack.getItem() == PineappleItems.pineapple_leggings) {   		
-    		return Pineapple.MODID + ":textures/models/armor/pineapple_layer_2.png";   	
-    	}     	
-    	if(stack.getItem() == PineappleItems.godly_pineapple_helmet || stack.getItem() == PineappleItems.godly_pineapple_chestplate || stack.getItem() == PineappleItems.godly_pineapple_boots) {
-    		return Pineapple.MODID + ":textures/models/armor/godpineapple_layer_1.png";   		
-    	}    	
-    	if(stack.getItem() == PineappleItems.godly_pineapple_leggings) {    		
-    		return Pineapple.MODID + ":textures/models/armor/godpineapple_layer_2.png";    	
-    	} else { 
-        	return null;
-    	}
-    }	
 }

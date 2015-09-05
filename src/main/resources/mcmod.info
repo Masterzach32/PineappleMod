@@ -1,8 +1,7 @@
-[
-{
+[{
   "modid": "Pineapple",
   "name": "The Pineapple Mod",
-  "version": "1.4.1 Beta 1",
+  "version": "1.5.0 Beta 1",
   "mcversion": "1.7.10",
   "description": "The Pineapple Mod is a mod that adds pineapples to Minecraft. Pineapples spawn on sand in clusters (like pumpkins) and can be broken to get pieces of the pineapple block. Build tools and armor with pineapples and rule your world with the most powerful material in Minecraft!",
   "credits": "Created by Masterzach32",
@@ -15,5 +14,4 @@
   "dependencies": [
      "mod_MinecraftForge"
   ]
-}
-]
+}]

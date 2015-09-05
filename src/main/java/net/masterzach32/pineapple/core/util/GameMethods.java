@@ -56,7 +56,6 @@ public class GameMethods {
 			for(int countparticles = 0; countparticles <= 150; ++countparticles) {
 				world.spawnParticle("reddust", entity.posX + (rand.nextDouble() - 0.5D) * (double)entity.width, entity.posY + rand.nextDouble() * (double)entity.height - (double)entity.yOffset, entity.posZ + (rand.nextDouble() - 0.5D) * (double)entity.width, 0.0D, 10D, 0.0D);
 			}
-
 		} else if (type == "crit") {
 			Random rand = new Random();
 			for(int countparticles = 0; countparticles <= 100; ++countparticles) {
@@ -87,8 +86,7 @@ public class GameMethods {
 			mc.objectMouseOver = mc.renderViewEntity.rayTrace(maxDistance, tick);
 			double distance2 = distance;
 			Vec3 vec3 = mc.renderViewEntity.getPosition(tick);
-			if (this.mc.objectMouseOver != null)
-            {
+			if (this.mc.objectMouseOver != null) {
                 distance2 = this.mc.objectMouseOver.hitVec.distanceTo(vec3);
             }
 			Vec3 vec31 = mc.renderViewEntity.getLook(tick);

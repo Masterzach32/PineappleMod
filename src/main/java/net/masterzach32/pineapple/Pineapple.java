@@ -43,14 +43,14 @@ public class Pineapple implements IUpdatableMod {
 	/**
 	 * Mod Version + Minecraft Version.
 	 */
-	public static final String VERSION = "1.4.1.250";
-	public static final String SVERSION = "1.4.1 Beta 1";
+	public static final String VERSION = "1.5.0.251";
+	public static final String SVERSION = "1.5.0 Beta 1";
 
 	public static EnumEnchantmentType enumStaff = EnumHelper.addEnchantmentType("staff");
 
 	public static DamageSource pineapple = new DamageSource("pineapple").setMagicDamage().setProjectile();
 	
-	public static final PineappleTab pineapple_tab = new PineappleTab(CreativeTabs.getNextID(), "pineapple_tab");
+	public static final PineappleTab pineapple_tab = new PineappleTab(CreativeTabs.getNextID(), "pineapple_tab"), staff_tab = new PineappleTab(CreativeTabs.getNextID(), "staff_tab");
 
 	/**
 	 * The instance of The Pineapple Mod that Forge uses.
@@ -102,7 +102,7 @@ public class Pineapple implements IUpdatableMod {
 	 */
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-		PineappleTab.items = Arrays.asList(
+		pineapple_tab.items = Arrays.asList(
 				Item.getItemFromBlock(PineappleBlocks.pineapple_block), 
 				Item.getItemFromBlock(PineappleBlocks.godly_pineapple_block), 
 				PineappleItems.pineapple,
@@ -110,17 +110,15 @@ public class Pineapple implements IUpdatableMod {
 				PineappleItems.godly_pineapple,
 				PineappleItems.pineapple_grilled,
 				PineappleItems.pineapple_seeds,
+				PineappleItems.pineapple_pie_dough,
 				PineappleItems.pineapple_pie_uncooked,
 				PineappleItems.pineapple_pie_cooked,
 				PineappleItems.pineapple_rod,
-				PineappleItems.pineapple_pie_dough,
-				PineappleItems.pineapple_staff,
 				PineappleItems.pineapple_sword,
 				PineappleItems.pineapple_pickaxe,
 				PineappleItems.pineapple_axe,
 				PineappleItems.pineapple_shovel,
 				PineappleItems.pineapple_hoe,
-				PineappleItems.godly_pineapple_staff,
 				PineappleItems.godly_pineapple_sword,
 				PineappleItems.godly_pineapple_pickaxe,
 				PineappleItems.godly_pineapple_axe,
@@ -135,7 +133,26 @@ public class Pineapple implements IUpdatableMod {
 				PineappleItems.godly_pineapple_leggings,
 				PineappleItems.godly_pineapple_boots
 			);
-		PineappleTab.compItemStacks = Ordering.explicit(PineappleTab.items).onResultOf(new Function<ItemStack, Item>() {
+		pineapple_tab.compItemStacks = Ordering.explicit(pineapple_tab.items).onResultOf(new Function<ItemStack, Item>() {
+			public Item apply(ItemStack input) {
+				return input.getItem();
+			}
+		});
+		staff_tab.items = Arrays.asList(
+				PineappleItems.pineapple_rod,
+				PineappleItems.pineapple_essence,
+				PineappleItems.pineapple_arc,
+				PineappleItems.pineapple_crystal_empty,
+				PineappleItems.pineapple_crystal_full,
+				PineappleItems.basic_staff,
+				PineappleItems.damage_staff,
+				PineappleItems.golden_damage_staff,
+				PineappleItems.godly_damage_staff,
+				PineappleItems.healing_staff,
+				PineappleItems.golden_healing_staff,
+				PineappleItems.godly_healing_staff
+			);
+		staff_tab.compItemStacks = Ordering.explicit(staff_tab.items).onResultOf(new Function<ItemStack, Item>() {
 			public Item apply(ItemStack input) {
 				return input.getItem();
 			}

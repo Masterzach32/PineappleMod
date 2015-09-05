@@ -1,8 +1,8 @@
 package net.masterzach32.pineapple.enchantment;
 
 import net.masterzach32.pineapple.Pineapple;
-import net.masterzach32.pineapple.item.GodPineappleStaff;
-import net.masterzach32.pineapple.item.PineappleStaff;
+import net.masterzach32.pineapple.item.magic.GodHealingStaff;
+import net.masterzach32.pineapple.item.magic.PineappleStaff;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.item.ItemStack;
@@ -45,7 +45,7 @@ public class EnchantmentHeal extends Enchantment {
     {
     	if (stack.getItem() instanceof PineappleStaff){
     		return true;
-    	} else if (stack.getItem() instanceof GodPineappleStaff){
+    	} else if (stack.getItem() instanceof GodHealingStaff){
     		return true;
     	} else {
     		return false;

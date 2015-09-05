@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemArmor"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.google.common.collect.Ordering"/>
+<fullyQualifiedTypeName name="akka.japi.Function"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.functions.Function"/>
+<fullyQualifiedTypeName name="java.util.function.Function"/>
+<fullyQualifiedTypeName name="com.google.common.base.Function"/>
+<fullyQualifiedTypeName name="net.masterzach32.pineapple.block.PineappleBlocks"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
+<fullyQualifiedTypeName name="net.masterzach32.pineapple.Pineapple"/>
+<fullyQualifiedTypeName name="net.masterzach32.pineapple.core.helper.LogHelper"/>
+<fullyQualifiedTypeName name="net.masterzach32.pineapple.item.PineappleItems"/>
+<fullyQualifiedTypeName name="net.masterzach32.pineapple.core.util.GameMethods"/>
 </qualifiedTypeNameHistroy>

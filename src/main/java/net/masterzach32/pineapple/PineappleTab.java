@@ -11,6 +11,7 @@ import com.google.common.collect.Ordering;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.masterzach32.pineapple.block.PineappleBlocks;
+import net.masterzach32.pineapple.core.helper.LogHelper;
 import net.masterzach32.pineapple.item.PineappleItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -18,9 +19,9 @@ import net.minecraft.item.ItemStack;
 
 public class PineappleTab extends CreativeTabs {
 
-	public static List<Item> items;
+	public List<Item> items;
 
-	public static Comparator<ItemStack> compItemStacks;
+	public Comparator<ItemStack> compItemStacks;
 
 	public PineappleTab(int id, String name) {
 		super(id, name);
@@ -35,11 +36,23 @@ public class PineappleTab extends CreativeTabs {
 	 * Sets the icon for the pineapple tab.
 	 */
 	public ItemStack getIconItemStack() {
-		return new ItemStack(PineappleItems.pineapple_staff, 1, 0);
+		if(this.getTabLabel() == "pineapple_tab")
+			return new ItemStack(PineappleItems.pineapple, 1, 0);
+		else if (this.getTabLabel() == "staff_tab") {
+			return new ItemStack(PineappleItems.basic_staff, 1, 0);
+		} else {
+			return new ItemStack(PineappleItems.pineapple, 1, 0);
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
-		return PineappleItems.pineapple_staff;
+		if(this.getTabLabel() == "pineapple_tab")
+			return PineappleItems.pineapple;
+		else if (this.getTabLabel() == "staff_tab") {
+			return PineappleItems.basic_staff;
+		} else {
+			return PineappleItems.pineapple;
+		}
 	}
 }
