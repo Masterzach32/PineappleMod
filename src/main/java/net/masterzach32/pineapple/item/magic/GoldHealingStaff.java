@@ -36,7 +36,7 @@ public class GoldHealingStaff extends PineappleStaff {
 	public void addInformation(ItemStack stack, EntityPlayer player, List dataList, boolean b) {
 		if(stack.stackTagCompound == null) stack.setTagCompound(new NBTTagCompound());
 		updateStats(stack);
-		dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("damage") + " §e(1 + 15% Energy) Attack Damage");
+		dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("damage") + " §e(1 + 10% Energy) Attack Damage");
 		dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("lifeSteal") + "% §e(5% Energy) LifeSteal");
 		dataList.add("");
 		dataList.add("§9Passive: §3Gain 5 energy on hit.");
@@ -110,7 +110,7 @@ public class GoldHealingStaff extends PineappleStaff {
 		double damage = stack.stackTagCompound.getDouble("damage");
 		double lifeSteal = stack.stackTagCompound.getDouble("lifeSteal");
 		
-		damage = (1 + (energy * .15));
+		damage = (1 + (energy * .1));
 		lifeSteal = energy * .05;
 		if(energy > stack.stackTagCompound.getInteger("maxEnergy")) energy = stack.stackTagCompound.getInteger("maxEnergy");
 		

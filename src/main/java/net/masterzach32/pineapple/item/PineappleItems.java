@@ -109,10 +109,13 @@ public class PineappleItems extends Item {
 	public static final Item godly_pineapple_boots = new PineappleArmor(PINEAPPLEAG, 0, 3).setUnlocalizedName("godly_pineapple_boots").setCreativeTab(Pineapple.pineapple_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_boots");
 	// Staffs
 	public static final Item pineapple_rod = new Item().setFull3D().setUnlocalizedName("pineapple_rod").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_rod");
-	public static final Item pineapple_essence = new Item().setFull3D().setUnlocalizedName("pineapple_essence").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_essence");
+	public static final Item pineapple_essence = new Item().setUnlocalizedName("pineapple_essence").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_essence");
+	public static final Item golden_pineapple_essence = new Item().setUnlocalizedName("golden_pineapple_essence").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":golden_pineapple_essence");
+	public static final Item godly_pineapple_essence = new Item().setUnlocalizedName("godly_pineapple_essence").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":godly_pineapple_essence");
 	public static final Item pineapple_arc = new Item().setUnlocalizedName("pineapple_arc").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_arc");
-	public static final Item pineapple_crystal_empty = new Item().setUnlocalizedName("pineapple_crystal_empty").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_crystal_empty");
-	public static final Item pineapple_crystal_full = new Item().setFull3D().setUnlocalizedName("pineapple_crystal_full").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_crystal_full");
+	public static final Item pineapple_crystal_empty = new PineappleCrystal(0).setUnlocalizedName("pineapple_crystal_empty").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_crystal_empty");
+	public static final Item pineapple_crystal_red = new PineappleCrystal(1).setUnlocalizedName("pineapple_crystal_red").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_crystal_red");
+	public static final Item pineapple_crystal_green = new PineappleCrystal(2).setUnlocalizedName("pineapple_crystal_green").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":pineapple_crystal_green");
 	public static final Item basic_staff = new BasicStaff(100, 0).setFull3D().setUnlocalizedName("basic_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":basic_staff");
 	public static final Item damage_staff = new DamageStaff(100, 0).setFull3D().setUnlocalizedName("damage_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":damage_staff");
 	public static final Item golden_damage_staff = new GoldDamageStaff(75, 100).setFull3D().setUnlocalizedName("golden_damage_staff").setCreativeTab(Pineapple.staff_tab).setTextureName(Pineapple.MODID + ":golden_healing_staff");

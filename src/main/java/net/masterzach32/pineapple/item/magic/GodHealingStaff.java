@@ -65,10 +65,10 @@ public class GodHealingStaff extends PineappleStaff {
 		dataList.add("§9Active: §3Consume §c" + stack.stackTagCompound.getInteger("cost") + " §3Energy to heal a maximum");
 		dataList.add("§3of §c" + (int) stack.stackTagCompound.getDouble("energy") / 20 + "§3 (5% Energy) Heart(s).");
 		super.addInformation(stack, player, dataList, b);
-		dataList.add("");
+		/*dataList.add("");
 		dataList.add("§3§o\"A Godly staff only the Pineapple Gods can use. The");
 		dataList.add("§3§oPineapple Gods showed Steve the way to make it");
-		dataList.add("§3§oafter he found the shrine of Pineapples\"");
+		dataList.add("§3§oafter he found the shrine of Pineapples\"");*/
 	}
 	
 	/**

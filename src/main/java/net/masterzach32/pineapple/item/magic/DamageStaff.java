@@ -38,8 +38,8 @@ public class DamageStaff extends PineappleStaff {
     }
 	
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
-		entity.attackEntityFrom(Pineapple.pineapple, (float) stack.stackTagCompound.getDouble("damage"));
-		return false;
+		boolean b = entity.attackEntityFrom(Pineapple.pineapple, (float) stack.stackTagCompound.getDouble("damage"));
+		return b;
 	}
 	
 	@SuppressWarnings({"rawtypes", "unchecked"})
@@ -50,7 +50,7 @@ public class DamageStaff extends PineappleStaff {
 		}
 		dataList.add("§e+" + (int) stack.stackTagCompound.getDouble("damage") +" Attack Damage");
 		dataList.add("");
-		dataList.add("§9Active: §3Deal §c" + (int) stack.stackTagCompound.getDouble("damage") + " §3Damage in");
+		dataList.add("§9Active: §3Deal §c4 §3Damage in");
 		dataList.add("§3an area infront of you.");
 		super.addInformation(stack, player, dataList, b);
 	}

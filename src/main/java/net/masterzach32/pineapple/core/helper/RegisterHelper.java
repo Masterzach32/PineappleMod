@@ -63,9 +63,12 @@ public class RegisterHelper {
         
         GameRegistry.registerItem(PineappleItems.pineapple_rod, "pineapple_rod");
         GameRegistry.registerItem(PineappleItems.pineapple_essence, "pineapple_essence");
+        GameRegistry.registerItem(PineappleItems.golden_pineapple_essence, "golden_pineapple_essence");
+        GameRegistry.registerItem(PineappleItems.godly_pineapple_essence, "godly_pineapple_essence");
         GameRegistry.registerItem(PineappleItems.pineapple_arc, "pineapple_arc");
         GameRegistry.registerItem(PineappleItems.pineapple_crystal_empty, "pineapple_crystal_empty");
-        GameRegistry.registerItem(PineappleItems.pineapple_crystal_full, "pineapple_crystal_full");
+        GameRegistry.registerItem(PineappleItems.pineapple_crystal_red, "pineapple_crystal_red");
+        GameRegistry.registerItem(PineappleItems.pineapple_crystal_green, "pineapple_crystal_green");
         GameRegistry.registerItem(PineappleItems.basic_staff, "basic_staff");
         GameRegistry.registerItem(PineappleItems.damage_staff, "damage_staff");
         GameRegistry.registerItem(PineappleItems.golden_damage_staff, "golden_damage_staff");
@@ -109,19 +112,17 @@ public class RegisterHelper {
 		ItemStack stack_pineapple_essence = new ItemStack(PineappleItems.pineapple_essence);
 		ItemStack stack_pineapple_crystal_empty = new ItemStack(PineappleItems.pineapple_crystal_empty);
 		
-	    GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_arc),   " X ", 
-				  															  "X#X", 
-				  															  " X ", 'X', stack_pineapple_essence, '#', stack_pineapple_golden);
-	    GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_essence, 2),   "X", 'X', stack_pineapple_golden);
-	    GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_crystal_empty),   "XZX", 
-				  															            "Z#Z", 
-				  															            "XZX", 'X', stack_pineapple_essence, '#', stack_pineapple, 'Z', stack_pineapple_golden);
-	    
-	    GameRegistry.addRecipe(new ItemStack(PineappleItems.godly_healing_staff),   "@X@", 
-	    																			  "X#X", 
-	    																			  "@X@", 'X', stack_diamond, '@', stack_emerald, '#', stack_basic_staff);
+	    GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_essence, 2),   "X", 'X', stack_pineapple);
+	    GameRegistry.addRecipe(new ItemStack(PineappleItems.golden_pineapple_essence, 2),   "X", 'X', stack_pineapple_golden);
+	    GameRegistry.addRecipe(new ItemStack(PineappleItems.godly_pineapple_essence, 2),   "X", 'X', stack_godly_pineapple);
+	    GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_crystal_empty),   "X#X", 
+				  															            "# #", 
+				  															            "X#X", 'X', stack_pineapple_arc, '#', stack_pineapple_essence);
+	    GameRegistry.addRecipe(new ItemStack(PineappleItems.basic_staff), 		" #Z", 
+																				" X#", 
+																				"X  ", 'X', stack_pineapple_rod, '#', stack_pineapple_arc, 'Z', stack_pineapple_crystal_empty);
 	    GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_helmet), "XXX", 
-	    																			  "X X", 'X', stack_pineapple_golden);
+	    																	   "X X", 'X', stack_pineapple_golden);
 		GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_chestplate),  "X X", 
 																					  "XXX", 
 																					  "XXX", 'X', stack_pineapple_golden);
@@ -146,9 +147,6 @@ public class RegisterHelper {
 		GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_golden),"XXX", 
 																						"X#X", 
 																						"XXX", 'X', stack_gold, '#', stack_pineapple);
-		GameRegistry.addRecipe(new ItemStack(PineappleItems.basic_staff), 		" #Z", 
-																					" X#", 
-																					"X  ", 'X', stack_pineapple_rod, '#', stack_pineapple_arc, 'Z', stack_pineapple_crystal_empty);
 		GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_sword), 	"X", 
 																				"X", 
 																				"#", 'X', stack_pineapple_golden, '#', stack_stick);
@@ -183,12 +181,12 @@ public class RegisterHelper {
 		GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_pie_dough), "@X@", "###", 'X', stack_egg,'#', stack_wheat, '@', stack_sugar);
 		GameRegistry.addRecipe(new ItemStack(PineappleItems.pineapple_pie_uncooked), "###", "XXX", '#', stack_pineapple, 'X', stack_pie_dough);
 			
-		PineappleItems.PINEAPPLET.customCraftingMaterial = PineappleItems.pineapple_golden;
-		PineappleItems.PINEAPPLETG.customCraftingMaterial = PineappleItems.godly_pineapple;
-			
 		GameRegistry.addSmelting(PineappleItems.pineapple, stack_pineapple_grilled, 1.0F);
 		GameRegistry.addSmelting(PineappleItems.pineapple_pie_uncooked, stack_pineapple_pie, 1.5F);
+		GameRegistry.addSmelting(PineappleItems.pineapple_rod, stack_pineapple_arc, 1.0F);
 	    
+		PineappleItems.PINEAPPLET.customCraftingMaterial = PineappleItems.pineapple_golden;
+		PineappleItems.PINEAPPLETG.customCraftingMaterial = PineappleItems.godly_pineapple;
 		PineappleItems.PINEAPPLEA.customCraftingMaterial = PineappleItems.pineapple_golden;
 		PineappleItems.PINEAPPLEAG.customCraftingMaterial = PineappleItems.godly_pineapple;
 	}

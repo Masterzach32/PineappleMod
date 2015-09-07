@@ -7,6 +7,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.masterzach32.pineapple.Pineapple;
 import net.masterzach32.pineapple.core.util.GameMethods;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -43,10 +44,13 @@ public class GoldDamageStaff extends PineappleStaff {
 	public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
 		updateStats(stack);
 		boolean b;
-		if(GameMethods.isCritAttack(stack.stackTagCompound.getDouble("critchance")))
+		if(GameMethods.isCritAttack(stack.stackTagCompound.getDouble("critchance"))) {
 			b = entity.attackEntityFrom(Pineapple.pineapple, (float) (2 * stack.stackTagCompound.getDouble("damage")));
-		else
-			b = entity.attackEntityFrom(Pineapple.pineapple, (float) (2 * stack.stackTagCompound.getDouble("damage")));
+			GameMethods.spawnParticles("crit", stack, entity.worldObj, (EntityLivingBase) entity);
+		} else {
+			b = entity.attackEntityFrom(Pineapple.pineapple, (float) (stack.stackTagCompound.getDouble("damage")));
+		}
+		if(b) stack.stackTagCompound.setDouble("energy" , stack.stackTagCompound.getDouble("energy") + 5);
 		updateStats(stack);
 		return b;
 	}
@@ -59,7 +63,7 @@ public class GoldDamageStaff extends PineappleStaff {
 		}
 		updateStats(stack);
 		dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("damage") +" §e(1 + 10% Energy) Attack Damage");
-		dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("critChance") +"% §e(15% Energy) Crit Chance");
+		dataList.add("§e+§c" + (int) stack.stackTagCompound.getDouble("critChance") +"% §e(20% Energy) Crit Chance");
 		dataList.add("");
 		dataList.add("§9Passive: §3Gain 5 energy on hit.");
 		dataList.add("§9Active: §3Consume §c" + stack.stackTagCompound.getInteger("cost") + "§3 Energy to deal §c" + (int) (stack.stackTagCompound.getDouble("damage") * 1.3) +  " §3(130% Attack Damage)");
@@ -72,8 +76,8 @@ public class GoldDamageStaff extends PineappleStaff {
 		double damage = stack.stackTagCompound.getDouble("damage");
 		double critChance = stack.stackTagCompound.getDouble("critChance");
 		
-		damage = (1 + (energy * .10));
-		critChance = energy * .15;
+		damage = (1 + (energy * .1));
+		critChance = energy * .2;
 		if(energy > stack.stackTagCompound.getInteger("maxEnergy")) energy = stack.stackTagCompound.getInteger("maxEnergy");
 		
 		stack.stackTagCompound.setDouble("energy", energy);

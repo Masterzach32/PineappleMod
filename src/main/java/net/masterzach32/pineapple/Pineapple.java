@@ -141,9 +141,12 @@ public class Pineapple implements IUpdatableMod {
 		staff_tab.items = Arrays.asList(
 				PineappleItems.pineapple_rod,
 				PineappleItems.pineapple_essence,
+				PineappleItems.golden_pineapple_essence,
+				PineappleItems.godly_pineapple_essence,
 				PineappleItems.pineapple_arc,
 				PineappleItems.pineapple_crystal_empty,
-				PineappleItems.pineapple_crystal_full,
+				PineappleItems.pineapple_crystal_red,
+				PineappleItems.pineapple_crystal_green,
 				PineappleItems.basic_staff,
 				PineappleItems.damage_staff,
 				PineappleItems.golden_damage_staff,

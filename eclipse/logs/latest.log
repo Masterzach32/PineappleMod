@@ -1,61 +1,30 @@
-[02:12:25] [main/INFO]: Setting user: Player70
-[02:12:26] [Client thread/INFO]: LWJGL Version: 2.9.1
-[02:12:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
-[02:12:33] [Sound Library Loader/INFO]: Sound engine started
-[02:12:34] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[02:12:34] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[02:12:34] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
-[02:12:35] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[02:12:35] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[02:12:36] [Sound Library Loader/INFO]: Sound engine started
-[02:12:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[02:12:40] [Server thread/INFO]: Generating keypair
-[02:12:43] [Server thread/INFO]: Preparing start region for level 0
-[02:12:44] [Server thread/INFO]: Changing view distance to 12, from 10
-[02:12:44] [Server thread/INFO]: Player70[local:E:d7fc5952] logged in with entity id 333 at (129.33857699795334, 89.0, 244.95353435998229)
-[02:12:44] [Server thread/INFO]: Player70 joined the game
-[02:12:44] [Client thread/INFO]: [CHAT] [Pineapple Mod] An update is available for this mod
-[02:12:45] [Server thread/INFO]: Player70 has just earned the achievement [Taking Inventory]
-[02:12:45] [Client thread/INFO]: [CHAT] Player70 has just earned the achievement [Taking Inventory]
-[02:15:40] [Client thread/INFO]: Stopping!
-[02:15:40] [Server thread/INFO]: Stopping server
-[02:15:40] [Server thread/INFO]: Saving players
-[02:15:40] [Server thread/INFO]: Saving worlds
-[02:15:40] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[02:15:40] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[02:15:40] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[02:15:40] [Client Shutdown Thread/INFO]: Stopping server
-[02:15:40] [Client Shutdown Thread/INFO]: Saving players
-nager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
-[02:14:14] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[02:14:14] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[02:14:15] [Sound Library Loader/INFO]: Sound engine started
-[02:15:42] [Client thread/INFO]: Stopping!
-959
-[02:15:42] [Client thread/INFO]: LWJGL Version: 2.9.1
-[02:15:47] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
-[02:15:48] [Sound Library Loader/INFO]: Sound engine started
-[02:15:48] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[02:15:48] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[02:15:49] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
-[02:15:49] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[02:15:49] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[02:15:50] [Sound Library Loader/INFO]: Sound engine started
-[02:15:52] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[02:15:52] [Server thread/INFO]: Generating keypair
-[02:15:52] [Server thread/INFO]: Preparing start region for level 0
-[02:15:53] [Server thread/INFO]: Changing view distance to 12, from 10
-[02:15:53] [Server thread/INFO]: Player959[local:E:c4c32224] logged in with entity id 337 at (121.81030227703747, 96.24728252212631, 258.672824329739)
-[02:15:53] [Server thread/INFO]: Player959 joined the game
-[02:15:54] [Client thread/INFO]: [CHAT] [Pineapple Mod] An update is available for this mod
-[02:15:55] [Server thread/INFO]: Player959 has just earned the achievement [Taking Inventory]
-[02:15:55] [Client thread/INFO]: [CHAT] Player959 has just earned the achievement [Taking Inventory]
-[02:17:42] [Client thread/INFO]: Stopping!
-[02:17:42] [Server thread/INFO]: Stopping server
-[02:17:42] [Server thread/INFO]: Saving players
-[02:17:42] [Server thread/INFO]: Saving worlds
-[02:17:42] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[02:17:42] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[02:17:42] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[02:17:42] [Client Shutdown Thread/INFO]: Stopping server
-[02:17:42] [Client Shutdown Thread/INFO]: Saving players
+[00:44:17] [main/INFO]: Setting user: Player593
+[00:44:18] [Client thread/INFO]: LWJGL Version: 2.9.1
+[00:44:23] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
+[00:44:24] [Sound Library Loader/INFO]: Sound engine started
+[00:44:26] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[00:44:26] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[00:44:27] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:The Pineapple Mod
+[00:44:27] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[00:44:27] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[00:44:28] [Sound Library Loader/INFO]: Sound engine started
+[00:44:53] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[00:44:53] [Server thread/INFO]: Generating keypair
+[00:44:53] [Server thread/INFO]: Preparing start region for level 0
+[00:44:54] [Server thread/INFO]: Changing view distance to 12, from 10
+[00:44:55] [Server thread/INFO]: Player593[local:E:32cd6782] logged in with entity id 285 at (140.6261557752331, 117.0, 62.15399858404572)
+[00:44:55] [Server thread/INFO]: Player593 joined the game
+[00:44:55] [Client thread/INFO]: [CHAT] [Pineapple Mod] An update is available for this mod
+[00:45:03] [Server thread/INFO]: Player593 has just earned the achievement [Taking Inventory]
+[00:45:03] [Client thread/INFO]: [CHAT] Player593 has just earned the achievement [Taking Inventory]
+[00:46:19] [Server thread/INFO]: Saving and pausing game...
+[00:46:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[00:46:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[00:46:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[00:46:19] [Server thread/INFO]: Stopping server
+[00:46:19] [Server thread/INFO]: Saving players
+[00:46:19] [Server thread/INFO]: Saving worlds
+[00:46:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[00:46:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[00:46:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[00:46:21] [Client thread/INFO]: Stopping!
