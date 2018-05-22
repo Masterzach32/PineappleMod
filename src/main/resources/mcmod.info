@@ -1,0 +1,12 @@
+[{
+  "modid": "pineapple",
+  "name": "Pineapple Mod",
+  "description": "The Pineapple Mod is a mod that adds pineapples to Minecraft. Pineapples spawn on sand in clusters (like pumpkins) and can be broken to get pieces of the pineapple block. Build tools and armor with pineapples and rule your world with the most powerful material in Minecraft!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "logoFile": "assets/examplemod/textures/logo.png",
+  "url": "masterzach32.net/",
+  "updateJSON": "",
+  "authorList": ["Zach Kozar"],
+  "credits": "Created by the true doge."
+}]
